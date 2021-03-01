@@ -1,5 +1,9 @@
 body {
-  background: linear-gradient(to left, rgba(64, 49, 70, 0.05), white);
+  background: linear-gradient(
+    to left,
+    rgba(200, 49, 70, 0.05),
+    rgba(70, 200, 10, 0.05)
+  );
 }
 
 #wrapper {
