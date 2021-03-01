@@ -7,7 +7,7 @@
   <!-- font -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
   <title>wedding-Invitation</title>
 </head>
 <body>
@@ -15,39 +15,48 @@
     <section id="cover">
       <h3>김동훈♥︎박희진</h3>
       <h1>결혼합니다</h1>
-      <a href="/">
+      <a href="/" >
         <img src="https://i.imgur.com/YEA7PD8.jpg" title="source: imgur.com" />
       </a>
       <p>2021.05.09 SUN <br> 남산예술원웨딩홀</p>
     </section>
     <section id="gallery">
       <div class="boy">
-        <a href="/">
-          <img src="https://i.imgur.com/erMCyVK.jpg" title="source: imgur.com" />
+        <button class="thumbnail">
+          <img class="thumbnail-image" src="https://i.imgur.com/erMCyVK.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
           <h3>뽀뽀</h3>
-        </a>
-        <a href="/">
-          <img src="https://i.imgur.com/RSgBhRq.jpg" title="source: imgur.com" />
+        </button>
+        <button class="thumbnail">
+          <img class="thumbnail-image" src="https://i.imgur.com/RSgBhRq.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
         <h3>발꼬락</h3>
-        </a>
+        </button>
       </div>
       <div class="girl">
-        <a href="/">
-          <img src="https://i.imgur.com/uGWpIiJ.jpg" title="source: imgur.com" />
+        <button class="thumbnail">
+          <img class="thumbnail-image" src="https://i.imgur.com/uGWpIiJ.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
           <h3>왕얼굴</h3>
-        </a>
-          <a href="/">
-            <img src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" />
+        </button>
+          <button class="thumbnail">
+            <img class="thumbnail-image" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
             <h3>바닷가</h3>
-          </a>
+          </button>
       </div>
+    </section>
+    <section id="modal">
+      <div class="modal-content">
+        <button onclick="document.querySelector('#modal').style.display = 'none'">
+          <img class="pop" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" />
+        </button>
+      </div>
+    </section>
+
+    <section id="calendar">
+      
     </section>
     <section class="location">
       
     </section>
-    <section class="calendar">
-  
-    </section>
+    
     <section class="share">
   
     </section>
