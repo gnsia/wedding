@@ -5,7 +5,7 @@ let modalContent = document.querySelector('.modal-content');
 let modalUrl = document.querySelector('.pop').src;
 
 function modalUp(self) {
-  // modalContent.style.background-image = 'url(self.src)';
+  document.querySelector('.pop').src = self.src;
   console.log(self.src);
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }

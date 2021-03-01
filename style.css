@@ -116,9 +116,15 @@ button {
   height: 100%;
   overflow: auto;
 }
+#modal .modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #modal .modal-content img {
   /* background-image: ; */
+  display: block;
   margin: auto 0;
   width: 100%;
 }
