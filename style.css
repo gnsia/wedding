@@ -12,9 +12,9 @@
 body {
   margin: 0;
   padding: 20px 0px;
-  font-family: "MapoGoldenPier", serif;
-  font-weight: 100;
-  letter-spacing: 10px;
+  /* font-family: "MapoGoldenPier", serif; */
+  /* font-weight: 100; */
+  /* letter-spacing: 10px; */
 }
 
 img {
@@ -22,11 +22,10 @@ img {
 }
 
 .cover {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .contact {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-color: aqua;
 }
