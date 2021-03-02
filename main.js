@@ -9,3 +9,4 @@ function modalOpen(self) {
 function modalClose() {
   modal.style.display = 'none'
 }
+
