@@ -20,9 +20,9 @@ function modalClose() {
 
 addEventListener('scroll', function(e){
   let scrollYPos = Math.round(scrollY/30)/10;
-  console.log(scrollYPos);
+  console.log(scrollY);
   opacityUpNames(scrollYPos);
-  // opacityUpMessage(scrollYPos-3);
+  opacityUpMessage(scrollY);
 })
 
 function opacityUpNames(num) {
@@ -31,5 +31,18 @@ function opacityUpNames(num) {
 }
 
 function opacityUpMessage(num) {
-  document.querySelector('.message').style.opacity = num;
+  if (num > 1000) {
+    document.querySelector('.message').style.position = 'sticky';
+    document.querySelector('.message').style.top = '5%';
+  } else {
+    document.querySelector('.message').style.position = 'relative';
+    document.querySelector('.message').style.top = '1000px';
+  }
+  if (num > 777) {
+    document.querySelector('i').style.color = 'rgba(255, 0, 0,0.4)';
+    document.querySelector('.heart').style.opacity = 0;
+  } else {
+    document.querySelector('i').style.color = 'lightsteelblue';
+    document.querySelector('.heart').style.opacity = 1;
+  }
 }
