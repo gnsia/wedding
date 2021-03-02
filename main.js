@@ -1,6 +1,7 @@
+// modal
+
 let modal = document.querySelector('#modal');
 let mainImg = document.querySelector('#main-img')
-// let scrollYPos = Math.around(scrollY);
 
 function modalOpen(self) {
   document.querySelector('.pop').src = self.src;
@@ -12,13 +13,23 @@ function modalClose() {
   modal.style.display = 'none'
 }
 
+
+
+
+//scroll
+
 addEventListener('scroll', function(e){
   let scrollYPos = Math.round(scrollY/30)/10;
   console.log(scrollYPos);
-  streching(scrollYPos);
+  opacityUpNames(scrollYPos);
+  // opacityUpMessage(scrollYPos-3);
 })
 
-function streching(num) {
+function opacityUpNames(num) {
   document.querySelector('.boy').style.opacity = num;
   document.querySelector('.girl').style.opacity = num;
+}
+
+function opacityUpMessage(num) {
+  document.querySelector('.message').style.opacity = num;
 }
