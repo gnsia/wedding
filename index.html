@@ -15,7 +15,7 @@
     <section id="cover">
       <h3>김동훈♥︎박희진</h3>
       <h1>결혼합니다</h1>
-      <a href="/" >
+      <a>
         <img src="https://i.imgur.com/YEA7PD8.jpg" title="source: imgur.com" />
       </a>
       <p>2021.05.09 SUN <br> 남산예술원웨딩홀</p>
@@ -23,28 +23,28 @@
     <section id="gallery">
       <div class="boy">
         <button class="thumbnail">
-          <img class="thumbnail-image" src="https://i.imgur.com/erMCyVK.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
+          <img class="thumbnail-image" src="https://i.imgur.com/erMCyVK.jpg" title="source: imgur.com" onclick="modalOpen(this)"/>
           <h3>뽀뽀</h3>
         </button>
         <button class="thumbnail">
-          <img class="thumbnail-image" src="https://i.imgur.com/RSgBhRq.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
+          <img class="thumbnail-image" src="https://i.imgur.com/RSgBhRq.jpg" title="source: imgur.com" onclick="modalOpen(this)"/>
         <h3>발꼬락</h3>
         </button>
       </div>
       <div class="girl">
         <button class="thumbnail">
-          <img class="thumbnail-image" src="https://i.imgur.com/uGWpIiJ.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
+          <img class="thumbnail-image" src="https://i.imgur.com/uGWpIiJ.jpg" title="source: imgur.com" onclick="modalOpen(this)"/>
           <h3>왕얼굴</h3>
         </button>
           <button class="thumbnail">
-            <img class="thumbnail-image" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" onclick="modalUp(this)"/>
+            <img class="thumbnail-image" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" onclick="modalOpen(this)"/>
             <h3>바닷가</h3>
           </button>
       </div>
     </section>
-    <section id="modal">
+    <section id="modal" onclick="modalClose()">
       <div class="modal-content">
-        <img class="pop" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" onclick="document.querySelector('#modal').style.display = 'none'" />
+        <img class="pop" src="https://i.imgur.com/IEv3RB3.jpg" title="source: imgur.com" />
       </div>
     </section>
 

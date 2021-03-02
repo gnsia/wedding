@@ -4,8 +4,12 @@ let imgUrl = document.querySelectorAll('.thumbnail-image');
 let modalContent = document.querySelector('.modal-content');
 let modalUrl = document.querySelector('.pop').src;
 
-function modalUp(self) {
+function modalOpen(self) {
   document.querySelector('.pop').src = self.src;
   console.log(self.src);
   modal.style.display = "flex";
+}
+
+function modalClose() {
+  modal.style.display = 'none'
 }
