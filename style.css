@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
-
 body {
-  background-color: white;
+  background: linear-gradient(
+    to left,
+    rgba(200, 49, 70, 0.05),
+    rgba(70, 200, 10, 0.05)
+  );
 }
 
 button {
@@ -18,36 +20,27 @@ button {
   border: 5px solid green;
 } */
 
-#cover {
-  margin: 3rem 0;
-}
-
 #cover h3 {
-  font-family: "Nanum Myeongjo", serif;
   text-align: center;
   font-weight: 500;
   margin: 3rem 0 1rem 0;
   letter-spacing: 1rem;
-  color: rgba(5, 5, 5, 0.4);
+  color: lightsteelblue;
 }
 
 #cover h1 {
-  /* position: relative; */
+  font-weight: 500;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  top: 3rem;
-  font-weight: 300;
-  font-size: large;
-  letter-spacing: 0.5rem;
-  /* left: 3rem; */
-  /* margin: auto auto; */
-  color: rgba(255, 0, 0, 0.3);
+  font-size: xx-large;
+  letter-spacing: 1rem;
+  margin: 1rem 0 1rem 0;
+  color: lightblue;
 }
 
 #cover a {
   border: 1px solid rgba(0, 0, 255, 0.05);
   display: block;
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
   margin: 1rem 1rem;
   border-radius: 100%;
   background-color: rgba(0, 255, 0, 0.05);
@@ -62,18 +55,16 @@ button {
 }
 
 #cover p {
-  position: relative;
-  font-family: "Nanum Myeongjo", serif;
-  font-size: xx-small;
+  font-size: small;
   text-align: center;
+  margin: 1rem 0;
   letter-spacing: 0.5rem;
   font-weight: 500;
-  color: rgba(0, 0, 255, 0.4);
+  color: lightskyblue;
   line-height: 1rem;
 }
 
 #gallery {
-  margin: 3rem 0;
   display: flex;
 }
 
@@ -103,16 +94,15 @@ button {
 }
 
 #gallery h3 {
-  font-family: "Times New Roman", Times, serif;
   text-align: center;
-  background-color: rgba(0, 255, 0, 0.05);
-  color: rgba(0, 0, 0, 0.4);
-  border-left: 1px solid rgba(0, 0, 255, 0.05);
-  border-right: 1px solid rgba(0, 0, 255, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 255, 0.05);
+  background-color: rgba(250, 250, 0, 0.05);
+  color: lightgray;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
-  padding: 0.2rem;
+  padding: 00.5rem;
   font-size: xx-small;
 }
 
@@ -124,7 +114,7 @@ button {
   width: 100%;
   height: 100%;
   max-width: 45rem;
-  overflow: hidden;
+  overflow: auto;
 }
 #modal .modal-content {
   display: flex;
