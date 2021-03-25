@@ -47,26 +47,46 @@
 }
 
 #wrapper {
-  /* border: 5px solid red; */
-  max-width: 45rem;
+  border: 3px solid red;
+  border-radius: 1rem;
+  max-width: 32rem;
   margin: 0 auto;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 
-#prologue {
-  width: 92vw;
-  /* text-align: center; */
-  /* border: 5px solid wheat; */
+#wrapper > * {
+  border: 3px solid green;
   border-radius: 1rem;
   margin: 1rem 0;
 }
 
-#prologue .blank {
-  height: 14rem;
-  /* border: 1px dotted black; */
-  /* border-radius: 10%; */
+/* PROLOGUE */
+
+#prologue {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vw;
+}
+
+/* #prologue > * {
+  border: 3px solid blue;
+  border-radius: 1rem;
+  margin: 1rem 0;
+} */
+
+#prologue .hello {
+  text-align: center;
+}
+
+#prologue .message {
+  text-align: center;
+  font-family: "Jal_Onuel";
+  line-height: 2rem;
 }
 
 #prologue h1 {
@@ -89,23 +109,10 @@
   margin: 1rem 0;
 }
 
-#prologue .message {
-  text-align: right;
-  font-family: "Jal_Onuel";
-  font-size: small;
-  margin: 1rem 0;
-  letter-spacing: 0.2rem;
-  line-height: 1.8rem;
-}
+/* INFO */
 
 #info {
-  width: 92vw;
-}
-
-#info .blank {
-  height: 14rem;
-  /* border: 1px dotted black; */
-  /* border-radius: 10%; */
+  width: 100%;
 }
 
 #info .message {
@@ -113,4 +120,44 @@
   font-size: smaller;
   margin: 1rem 0;
   line-height: 1.8rem;
+  text-align: center;
+}
+
+#info .card {
+  font-family: "Jal_Onuel";
+  display: flex;
+  flex-direction: column;
+}
+
+#info .btn-group {
+  font-family: "Jal_Onuel";
+}
+
+/* MAPS */
+
+#maps {
+  width: 100%;
+}
+
+#maps p {
+  text-align: center;
+}
+
+#maps .map p {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* GALLERY */
+#gallery {
+  width: 100%;
+}
+
+#gallery .thumbnail {
+  display: flex;
+}
+
+#gallery img {
+  width: 100%;
 }

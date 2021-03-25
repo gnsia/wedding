@@ -7,22 +7,23 @@
   <!-- font -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="reset.css">
-  <script src="main.js" defer></script>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
   <script src="https://kit.fontawesome.com/0573e74161.js" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
   <title>동훈이와 희진이의 청첩장</title>
 </head>
 <body>
   <div id="wrapper">
-
     <!-- PROLOGUE -->
     <section id="prologue">
-      <div class="blank"></div>
       <div class="hello">
         <h1>동훈이와 희진이의 <br> 결혼식에 초대합니다</h1>
         <h2>2021년 5월 9일 일요일 오후 2시</h2> 
         <h3>남 산 예 술 원 웨 딩 홀</h3>
       </div>
-      <div class="blank"></div>
       <div class="message">
         <p>
           곁에 있을 때 가장 나다운 모습이 되게 하는 한 사람<br>
@@ -32,37 +33,148 @@
           오셔서 많이 축복해 주시면 큰 기쁨이겠습니다.<br>
         </p>
       </div>
-      <div class="blank"></div>
     </section>
 
     <!-- INFO -->
 
     <section id="info">
-      <div class="account">
-        <div class="message">
-          <p>
-            코로나19의 종식을 예측할 수 없어 결혼식을 예정대로 진행하게 되었습니다. <br>
-            보내주시는 축하와 응원을 감사히 여기며 행복한 삶을 꾸려 잘 살겠습니다. <br>
-          </p>
-        </div>
-        <div class="buttons">
-          <button>신랑측혼주</button>
-          <button>신부측혼주</button>
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">마음 전하실 곳</h5>
+          <p class="card-text">코로나19의 종식을 예측할 수 없어 결혼식을 예정대로 진행하게 되었습니다.
+            보내주시는 축하와 응원을 감사히 여기며 행복한 삶을 꾸려 잘 살겠습니다.</p>
+          <!-- button collapse trigger -->
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#husband" aria-expanded="false" aria-controls="husband">
+              신랑측 혼주
+            </button>
+            <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#bride" aria-expanded="false" aria-controls="bride">
+              신부측 혼주
+            </button>
+          </div>
+          <!-- collapse -->
+          <div class="collapse" id="husband">
+            <div class="card card-body">
+              국민 029302 04 114322 (예금주 : 김흥식)
+            </div>
+          </div>
+          <div class="collapse" id="bride">
+            <div class="card card-body">
+              신한 110 001 333551 (예금주 : 박중혁)
+            </div>
+          </div>
         </div>
       </div>
-      <div class="blank"></div>
     </section>
-    
+
+    <!-- MAPS -->
+
+    <section id="maps">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              예식장 위치 확인하기
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              피로연장 위치 확인하기
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- GALLERY -->
+    
     <section id="gallery">
-    
-    </section>    
-    
-    
-    
-    <section class="share">
-  
+
+    <!-- Thumbnail trigger modal -->
+      <div class="thumbnail">
+        <div class="left">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-thumbnail" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1541250848049-b4f7141dca3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="img-thumbnail" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-thumbnail" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1541250848049-b4f7141dca3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="img-thumbnail" alt="...">
+          </button>
+        </div>
+        <div class="right">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1541250848049-b4f7141dca3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-thumbnail" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1541250848049-b4f7141dca3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="img-thumbnail" alt="...">
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-thumbnail" alt="...">
+          </button>
+        </div>
+
+      <!-- image Modal -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    
+    <!-- TEST -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1541250848049-b4f7141dca3f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1537907690979-ee8e01276184?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=582&q=80" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <!-- comments -->
+    
+    <section id="comments">
+      댓글
+    </section>
+    
+
+
+
+    
   </div>
 </body>
 </html>
