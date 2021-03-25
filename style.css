@@ -1,53 +1,13 @@
 @font-face {
-  font-family: "Jal_Onuel";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Jal_Onuel.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BinggraeSamanco-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco-Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BinggraeSamanco";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/BinggraeSamanco.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Binggrae-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Binggrae";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SDSamliphopangche_Outline";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff")
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 #wrapper {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   border-radius: 1rem;
   max-width: 32rem;
   margin: 0 auto;
@@ -57,7 +17,7 @@
 }
 
 #wrapper > * {
-  border: 3px solid green;
+  /* border: 3px solid green; */
   border-radius: 1rem;
   margin: 1rem 0;
 }
@@ -85,26 +45,26 @@
 
 #prologue .message {
   text-align: center;
-  font-family: "Jal_Onuel";
+  font-family: "GmarketSansLight";
   line-height: 2rem;
 }
 
 #prologue h1 {
-  font-family: "BinggraeSamanco";
+  font-family: "GmarketSansLight";
   font-size: xx-large;
   letter-spacing: 0.4rem;
   margin: 1rem 0;
-  color: rgba(0, 0, 0, 0.4);
 }
 
 #prologue h2 {
-  font-family: "Binggrae";
+  font-family: "GmarketSansLight";
+
   font-size: medium;
   margin: 1rem 0;
 }
 
 #prologue h3 {
-  font-family: "Binggrae";
+  font-family: "GmarketSansLight";
   font-size: small;
   margin: 1rem 0;
 }
@@ -112,31 +72,30 @@
 /* INFO */
 
 #info {
-  width: 100%;
+  width: 80vw;
 }
 
-#info .message {
-  font-family: "Jal_Onuel";
-  font-size: smaller;
-  margin: 1rem 0;
-  line-height: 1.8rem;
-  text-align: center;
-}
-
-#info .card {
-  font-family: "Jal_Onuel";
+#info .card-body {
+  font-family: "GmarketSansLight";
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-#info .btn-group {
-  font-family: "Jal_Onuel";
+#info .card-text {
+  text-align: center;
+  font-size: small;
+  letter-spacing: 0.2rem;
+}
+
+#info .card-title {
+  font-size: medium;
 }
 
 /* MAPS */
 
 #maps {
-  width: 100%;
+  width: 95vw;
 }
 
 #maps p {
@@ -147,6 +106,12 @@
   text-align: center;
   display: flex;
   justify-content: space-around;
+}
+
+#maps .accordion-button {
+  font-family: "GmarketSansLight";
+  color: black;
+  background-color: white;
 }
 
 /* GALLERY */

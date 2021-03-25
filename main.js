@@ -1,11 +1,17 @@
 // copyVal
-
-function copyVal(self) {
-  var copyText = document.getElementById("newVal");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
+function Clipboard_CopyTo(value) {
+  var tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
   document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
+  document.body.removeChild(tempInput);
+}
+
+document.querySelector('.clipboard').onclick = function(self) {
+  let copyVal = self.target.value;
+  console.log(copyVal);
+  Clipboard_CopyTo(copyVal);
 }
 
 
@@ -24,21 +30,4 @@ function modalClose() {
   modal.style.display = 'none'
 }
 
-
-
-//scroll opacity
-
-
-addEventListener('scroll', function(e){
-  let scrollYPos = Math.round(scrollY/30)/10;
-  console.log(scrollYPos);
-  opacityUpNames(scrollYPos);
-  // opacityUpMessage(scrollYPos-3);
-})
-
-//scroll zoom
-
-function opacityUpMessage(num) {
-  document.querySelector('.message').style.opacity = num;
-}
 
