@@ -8,12 +8,15 @@ function Clipboard_CopyTo(value) {
   document.body.removeChild(tempInput);
 }
 
-document.querySelector('.clipboard').onclick = function(self) {
+document.querySelector('.clipboard1').onclick = function(self) {
   let copyVal = self.target.value;
-  console.log(copyVal);
   Clipboard_CopyTo(copyVal);
 }
 
+document.querySelector('.clipboard2').onclick = function(self) {
+  let copyVal = self.target.value;
+  Clipboard_CopyTo(copyVal);
+}
 
 // modal
 
