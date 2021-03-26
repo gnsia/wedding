@@ -115,6 +115,10 @@
   background-color: white;
 }
 
+#maps #map-weddinghall {
+  border-radius: 1rem;
+}
+
 #maps dl {
   text-align: center;
 }
