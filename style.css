@@ -119,6 +119,10 @@
   border-radius: 1rem;
 }
 
+#maps .map-content {
+  text-align: center;
+}
+
 #maps dl {
   text-align: center;
 }
