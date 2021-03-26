@@ -7,6 +7,7 @@
 }
 
 #wrapper {
+  font-family: "GmarketSansLight";
   /* border: 3px solid red; */
   border-radius: 1rem;
   max-width: 32rem;
@@ -112,6 +113,19 @@
   font-family: "GmarketSansLight";
   color: black;
   background-color: white;
+}
+
+#maps dl {
+  text-align: center;
+}
+
+#maps dt {
+  margin-bottom: 0.4rem;
+  font-size: large;
+}
+
+#maps dd {
+  font-size: small;
 }
 
 /* GALLERY */
