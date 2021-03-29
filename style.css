@@ -85,8 +85,8 @@
 
 #info .card-text {
   text-align: center;
-  font-size: small;
-  letter-spacing: 0.2rem;
+  font-size: smaller;
+  letter-spacing: 0.1rem;
 }
 
 #info .card-title {
@@ -153,4 +153,10 @@
 
 #gallery img {
   width: 100%;
+}
+
+/* COMMENTS */
+
+#comments {
+  width: 90vw;
 }
