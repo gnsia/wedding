@@ -50,32 +50,54 @@
             보내주시는 축하와 응원을 감사히 여기며 <br> 
             행복한 삶을 꾸려 잘 살겠습니다.</p>
           <h5 class="card-title">마음 전하실 곳</h5>
-          <!-- button collapse trigger -->
-          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#husband" aria-expanded="false" aria-controls="husband">
+
+          <!-- Button trigger modal -->
+          <div class="modal-trigger">
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#husband">
               신랑측
             </button>
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#bride" aria-expanded="false" aria-controls="bride">
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#bride">
               신부측
             </button>
           </div>
-          <!-- collapse -->
-          <div class="collapse" id="husband">
-            <div class="card card-body">
-              국민 029302 04 114322 (예금주 : 김흥식)
-              <!-- Trigger -->
-              <button class="btn btn-dark clipboard1" value="02930204114322">
-                복사
-              </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="husband" tabindex="-1" aria-labelledby="husband" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">신랑측 계좌번호</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  국민 029302 04 114322 (예금주 : 김흥식)
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-dark clipboard1" value="02930204114322">
+                    계좌번호 복사
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="collapse" id="bride">
-            <div class="card card-body">
-              신한 110 001 333551 (예금주 : 박중혁)
-              <!-- Trigger -->
-              <button class="btn btn-dark clipboard2" value="110001333551">
-                복사
-              </button>
+          <div class="modal fade" id="bride" tabindex="-1" aria-labelledby="bride" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">신부측 계좌번호</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  신한 110 001 333551 (예금주 : 박중혁)
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-dark clipboard2" value="110001333551">
+                    계좌번호 복사
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,16 +107,12 @@
     <!-- MAPS -->
 
     <section id="maps">
-
       <div class="accordion" id="accordionExample">
-        
-        <!-- item -->
         <div class="accordion-item">
-
           <!-- trigger -->
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              예식장 위치 확인하기
+              예식장 정보 확인하기
             </button>
           </h2>
 
@@ -102,37 +120,74 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <!-- map -->
-              <div id="map-weddinghall" style="width: 400px;height: 300px; margin: auto;"></div>
+              <div id="map-weddinghall" style="width: 100%;height: 200px; margin: auto;">
+              </div>
+              <!-- INFO -->
+              <br>
+              <div class="alert alert-success clipboard3" role="alert" value="서울 용산구 소월로 375">
+                <strong>서울 용산구 소월로 375</strong>
+              </div>
+              <div class="alert alert-warning" role="alert">
+                <strong>200 여대 주차가능</strong>
+              </div>
+              <div class="alert alert-info" role="alert">
+                <strong>남산 공원에 위치한 웨딩홀이므로 <br> 현금인출기가 없습니다</strong>
+              </div>
+              <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="subway-tab" data-bs-toggle="tab" data-bs-target="#subway" type="button" role="tab" aria-controls="home" aria-selected="true">지하철 이용시</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus" type="button" role="tab" aria-controls="bus" aria-selected="false">버스 이용시</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="car-tab" data-bs-toggle="tab" data-bs-target="#car" type="button" role="tab" aria-controls="car" aria-selected="false">자가용 이용시</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="subway" role="tabpanel" aria-labelledby="home-tab">
+                  <br>
+                  <p>6호선 한강진역 1번 출구 반대방향 - 도보 7분 거리</p>
+                  <p>1번 출구 예식 한 시간 전 셔틀버스 운행 (10 ~ 15 분 간격)</p>
+                </div>
+                <div class="tab-pane fade" id="bus" role="tabpanel" aria-labelledby="bus-tab">
+                  <br>
+                  <p>장춘단 길 입구 하차 - 
+                    <span class="badge bg-primary">402</span>,
+                    <span class="badge bg-primary">405</span>,
+                    <span class="badge bg-primary">142</span>,
+                    <span class="badge bg-primary">420</span>,
+                    <span class="badge bg-primary">407</span>
+                  </p>
+                  <p>남산예술원 하차 - 
+                    <span class="badge bg-primary">402</span>,
+                    <span class="badge bg-primary">405</span>
+                  </p>
+                  <p>한강진역 하차 - 
+                    <span class="badge bg-primary">110</span>,
+                    <span class="badge bg-primary">405</span>
+                  </p>
+                  <p>블루스퀘어 하차 - 
+                    <span class="badge bg-primary">142</span>,
+                    <span class="badge bg-primary">144</span>,
+                    <span class="badge bg-primary">402</span>,
+                    <span class="badge bg-primary">407</span>,
+                    <span class="badge bg-success">6211</span>
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="car" role="tabpanel" aria-labelledby="car-tab">
+                  <br>
+                  <p>경부고속도로 - 한남대교에서 오실 경우</p>
+                  <p>경부고속도로 - 한남대교 - 한남5거리 (직진, 우측차선)</p>
+                  <p>북한남 삼거리(우측차선)- 다산로에서 U턴</p>
+                  <p>소월길(하얏트 방향) - 남산맨션 바로 옆 남산예술원웨딩홀</p>
+                </div>
+              </div>
             </div>
-            <dl>
-              <dt><span class="badge rounded-pill bg-dark">+ 지하철 이용시 +</span></dt>
-              <dd>6호선 한강진역 1번 출구 반대방향 - 도보 7분 거리</dd>
-              <dd>1번 출구 예식 한 시간 전 셔틀버스 운행 (10 ~ 15 분 간격)</dd>
-              <br>
-              <dt><span class="badge rounded-pill bg-dark">+ 버스 이용시 +</span></dt>
-              <dd>장춘단 길 입구 하차 - 간선 402, 405(광화문 - 장지동 방향), 142, 420, 407</dd>
-              <dd>남산예술원 하차 - 402, 405 (장지동 - 광화문 방향)</dd>
-              <dd>한강진역 하차 - 간선 110, 405</dd>
-              <dd>서울시 중부기술 교육원, 블루스퀘어 하차 - 간선 142, 144, 402, 407 / 지선 6211</dd>
-              <br>
-              <dt><span class="badge rounded-pill bg-dark">+ 자가용 이용시 +</span></dt>
-              <dd>경부고속도로 - 한남대교에서 오실 경우</dd>
-              <dd>경부고속도로 - 한남대교 - 한남5거리 (직진, 우측차선) - 북한남 삼거리(우측차선)</dd>
-              <dd>- 다산로에서 U턴 - 소월길(하얏트 방향) - 남산맨션 바로 옆 남산예술원웨딩홀</dd>
-              <br>
-              <dt><span class="badge rounded-pill bg-dark">+ 주차 안내 +</span></dt>
-              <dd>200여대 주차가능</dd>
-              <br>
-              <dt><span class="badge rounded-pill bg-dark">+ 현금인출기 안내 +</span></dt>
-              <dd>남산 공원에 위치한 웨딩홀이므로 현금인출기가 없습니다.</dd>
-              <br>
-            </dl>
           </div>
         </div>
 
-        <!-- item -->
-        <div class="accordion-item">
-          
+        <div class="accordion-item">  
           <!-- trigger -->
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -143,7 +198,10 @@
           <!-- target -->
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <div id="map-afterparty" style="width: 400px;height: 300px; margin: auto;"></div>
+              <div id="map-afterparty" style="width: 100%;height: 300px; margin: auto;"></div>
+              <div class="alert alert-success clipboard4" role="alert" value="서울특별시 서대문구 수색로4길 7">
+                <strong>서울특별시 서대문구 수색로4길 7</strong>
+              </div>
             </div>
           </div>
         </div>

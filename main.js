@@ -1,25 +1,38 @@
-// clipboard_copyto
+////////////////////////////////////////////////////////////////////// clipboard_copyto
 function Clipboard_CopyTo(value) {
   var tempInput = document.createElement("input");
   tempInput.value = value;
   document.body.appendChild(tempInput);
   tempInput.select();
   document.execCommand("copy");
-  alert('복사완료!');
   document.body.removeChild(tempInput);
 }
 
 document.querySelector('.clipboard1').onclick = function(self) {
   let copyVal = self.target.value;
   Clipboard_CopyTo(copyVal);
+  alert('계좌번호가 복사되었습니다!');
 }
 
 document.querySelector('.clipboard2').onclick = function(self) {
   let copyVal = self.target.value;
   Clipboard_CopyTo(copyVal);
+  alert('계좌번호가 복사되었습니다!');
 }
 
-// modal
+document.querySelector('.clipboard3').onclick = function(self) {
+  let copyVal = self.target.value;
+  Clipboard_CopyTo(copyVal);
+  alert('주소가 복사되었습니다!');
+}
+
+document.querySelector('.clipboard4').onclick = function(self) {
+  let copyVal = self.target.value;
+  Clipboard_CopyTo(copyVal);
+  alert('주소가 복사되었습니다!');
+}
+
+////////////////////////////////////////////////////////////////////// modal
 
 let modal = document.querySelector('#modal');
 let mainImg = document.querySelector('#main-img')
@@ -41,43 +54,48 @@ function modalClose() {
 const weddinghall = {
   x: 37.54490486081645,
   y: 127.00042434032412,
+  position: new kakao.maps.LatLng(this.x, this.y),
+  markers: [
+    {
+      position: this.position
+    },
+    {
+      position: this.position,
+      text: '크게보기',
+    }
+  ],
+  container: document.getElementById('map-weddinghall'),
+  option: {
+    center: this.position,
+    level: 3,
+    marker: this.markers,
+  },
 }
 
-var mapContainer = document.getElementById('map-weddinghall'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(weddinghall.x, weddinghall.y), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+const weddinghallMap = new kakao.maps.StaticMap(weddinghall.container, weddinghall.option);
 
-var map = new kakao.maps.Map(mapContainer, mapOption);
+// const afterparty = {
+//   x:0,
+//   y:0,
+// }
 
-// 마커가 표시될 위치입니다 
-var markerPosition  = new kakao.maps.LatLng(weddinghall.x, weddinghall.y); 
+// const weddinghallPosition  = new kakao.maps.LatLng(weddinghall.x, weddinghall.y);
 
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition
-});
+// const weddinghallMarkers = [
+//   {
+//       position: weddinghallPosition,
+//   },
+//   {
+//       position: weddinghallPosition,
+//       text: '크게보기', // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
+//   }
+// ];
+// const weddinghallMapContainer = document.getElementById('map-weddinghall'), // 지도를 표시할 div
+//     weddinghallMapOption = { 
+//         center: weddinghallPosition, // 지도의 중심좌표
+//         level: 3, // 지도의 확대 레벨
+//         marker: weddinghallMarkers,
+//     };
 
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
-
-var iwContent = `
-    <div class="map-content" style="padding:5px; margin:auto;"> 
-      여기에요!<br>
-      <a href="https://map.kakao.com/link/map/여기에요!,37.54490486081645,127.00042434032412"
-        style="color:blue" target="_blank">
-        <span class="badge rounded-pill bg-dark">크게보기</span>
-      </a>
-    </div>
-    `, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    iwPosition = new kakao.maps.LatLng(weddinghall.x, weddinghall.y); //인포윈도우 표시 위치입니다
-
-// 인포윈도우를 생성합니다
-var infowindow = new kakao.maps.InfoWindow({
-    position : iwPosition, 
-    content : iwContent 
-});
-  
-// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-infowindow.open(map, marker); 
+// const weddinghallMap = new kakao.maps.StaticMap(weddinghallMapContainer, weddinghallMapOption);
+// //map-afterparty

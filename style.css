@@ -115,24 +115,30 @@
   background-color: white;
 }
 
+#maps .accordion-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 #maps #map-weddinghall {
-  border-radius: 1rem;
+  border-radius: 0.4rem;
 }
 
 #maps .map-content {
   text-align: center;
 }
 
-#maps dl {
+#maps p {
+  font-size: small;
+}
+
+#maps .nav-link {
+  font-size: small;
+}
+
+#maps .alert {
   text-align: center;
-}
-
-#maps dt {
-  margin-bottom: 0.4rem;
-  font-size: large;
-}
-
-#maps dd {
   font-size: small;
 }
 
