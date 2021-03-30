@@ -26,12 +26,6 @@ document.querySelector('.clipboard3').onclick = function(self) {
   alert('주소가 복사되었습니다!');
 }
 
-document.querySelector('.clipboard4').onclick = function(self) {
-  let copyVal = self.target.value;
-  Clipboard_CopyTo(copyVal);
-  alert('주소가 복사되었습니다!');
-}
-
 ////////////////////////////////////////////////////////////////////// modal
 
 let modal = document.querySelector('#modal');
@@ -51,9 +45,6 @@ function modalClose() {
 ////////////////////////////////////// kakao map - weddinghall
 // 예식장
 // 클릭한 위치의 위도는 37.54490486081645 이고, 경도는 127.00042434032412 입니다
-
-// 피로연장
-// 클릭한 위치의 위도는 37.56999384017024 이고, 경도는 126.91468466121901 입니다
 
 class myStaticMap{
   constructor(x, y, documentId){
@@ -80,9 +71,5 @@ class myStaticMap{
 }
 
 const weddinghall = new myStaticMap(37.54490486081645, 127.00042434032412, 'map-weddinghall');
-const afterparty = new myStaticMap(37.56999384017024, 126.91468466121901, 'map-afterparty');
-
-
 
 console.log('weddinghall', weddinghall);
-console.log('afterparty', afterparty);
