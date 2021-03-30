@@ -49,53 +49,40 @@ function modalClose() {
 
 
 ////////////////////////////////////// kakao map - weddinghall
+// 예식장
 // 클릭한 위치의 위도는 37.54490486081645 이고, 경도는 127.00042434032412 입니다
 
-const weddinghall = {
-  x: 37.54490486081645,
-  y: 127.00042434032412,
-  position: new kakao.maps.LatLng(this.x, this.y),
-  markers: [
-    {
-      position: this.position
-    },
-    {
-      position: this.position,
-      text: '크게보기',
-    }
-  ],
-  container: document.getElementById('map-weddinghall'),
-  option: {
-    center: this.position,
-    level: 3,
-    marker: this.markers,
-  },
+// 피로연장
+// 클릭한 위치의 위도는 37.56999384017024 이고, 경도는 126.91468466121901 입니다
+
+class myStaticMap{
+  constructor(x, y, documentId){
+    this.x = x;
+    this.y = y;
+    this.position = new kakao.maps.LatLng(this.x, this.y);
+    this.markers = [
+      {
+        position : this.position,
+      },
+      {
+        position : this.position,
+        text : 'here!',
+      }
+    ];
+    this.mapContainer = document.getElementById(documentId);
+    this.mapOption = {
+      center: this.position, // 지도의 중심좌표
+      level: 3, // 지도의 확대 레벨
+      marker: this.markers,
+    };
+    this.map = new kakao.maps.StaticMap(this.mapContainer, this.mapOption);
+  }
 }
 
-const weddinghallMap = new kakao.maps.StaticMap(weddinghall.container, weddinghall.option);
+const weddinghall = new myStaticMap(37.54490486081645, 127.00042434032412, 'map-weddinghall');
+const afterparty = new myStaticMap(37.56999384017024, 126.91468466121901, 'map-afterparty');
 
-// const afterparty = {
-//   x:0,
-//   y:0,
-// }
 
-// const weddinghallPosition  = new kakao.maps.LatLng(weddinghall.x, weddinghall.y);
 
-// const weddinghallMarkers = [
-//   {
-//       position: weddinghallPosition,
-//   },
-//   {
-//       position: weddinghallPosition,
-//       text: '크게보기', // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
-//   }
-// ];
-// const weddinghallMapContainer = document.getElementById('map-weddinghall'), // 지도를 표시할 div
-//     weddinghallMapOption = { 
-//         center: weddinghallPosition, // 지도의 중심좌표
-//         level: 3, // 지도의 확대 레벨
-//         marker: weddinghallMarkers,
-//     };
-
-// const weddinghallMap = new kakao.maps.StaticMap(weddinghallMapContainer, weddinghallMapOption);
-// //map-afterparty
+console.log('weddinghall', weddinghall);
+console.log('afterparty', afterparty);

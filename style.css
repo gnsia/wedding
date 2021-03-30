@@ -30,7 +30,7 @@
   flex-flow: column;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
+  width: 90vw;
   height: 100vw;
 }
 
@@ -48,6 +48,7 @@
   text-align: center;
   font-family: "GmarketSansLight";
   line-height: 2rem;
+  font-size: small;
 }
 
 #prologue h1 {
