@@ -111,108 +111,75 @@
     <!-- MAPS -->
 
     <section id="maps">
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <!-- trigger -->
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              예식장 정보 확인하기
-            </button>
-          </h2>
-
-          <!-- target -->
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <!-- map -->
-              <div id="map-weddinghall" style="width: 100%;height: 200px; margin: auto;">
-              </div>
-              <!-- INFO -->
-              <br>
-              <div class="alert alert-success clipboard3" role="alert" value="서울 용산구 소월로 375">
-                <strong>서울 용산구 소월로 375</strong>
-              </div>
-              <div class="alert alert-warning" role="alert">
-                <strong>200 여대 주차가능</strong>
-              </div>
-              <div class="alert alert-info" role="alert">
-                <strong>남산 공원에 위치한 웨딩홀이므로 <br> 현금인출기가 없습니다</strong>
-              </div>
-              <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="subway-tab" data-bs-toggle="tab" data-bs-target="#subway" type="button" role="tab" aria-controls="home" aria-selected="true">지하철 이용시</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus" type="button" role="tab" aria-controls="bus" aria-selected="false">버스 이용시</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="car-tab" data-bs-toggle="tab" data-bs-target="#car" type="button" role="tab" aria-controls="car" aria-selected="false">자가용 이용시</button>
-                </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="subway" role="tabpanel" aria-labelledby="home-tab">
-                  <br>
-                  <p>6호선 한강진역 1번 출구 반대방향 - 도보 7분 거리</p>
-                  <p>1번 출구 예식 한 시간 전 셔틀버스 운행 (10 ~ 15 분 간격)</p>
-                </div>
-                <div class="tab-pane fade" id="bus" role="tabpanel" aria-labelledby="bus-tab">
-                  <br>
-                  <p>장춘단 길 입구 하차 - 
-                    <span class="badge bg-primary">402</span>,
-                    <span class="badge bg-primary">405</span>,
-                    <span class="badge bg-primary">142</span>,
-                    <span class="badge bg-primary">420</span>,
-                    <span class="badge bg-primary">407</span>
-                  </p>
-                  <p>남산예술원 하차 - 
-                    <span class="badge bg-primary">402</span>,
-                    <span class="badge bg-primary">405</span>
-                  </p>
-                  <p>한강진역 하차 - 
-                    <span class="badge bg-primary">110</span>,
-                    <span class="badge bg-primary">405</span>
-                  </p>
-                  <p>블루스퀘어 하차 - 
-                    <span class="badge bg-primary">142</span>,
-                    <span class="badge bg-primary">144</span>,
-                    <span class="badge bg-primary">402</span>,
-                    <span class="badge bg-primary">407</span>,
-                    <span class="badge bg-success">6211</span>
-                  </p>
-                </div>
-                <div class="tab-pane fade" id="car" role="tabpanel" aria-labelledby="car-tab">
-                  <br>
-                  <p>경부고속도로 - 한남대교에서 오실 경우</p>
-                  <p>경부고속도로 - 한남대교 - 한남5거리 (직진, 우측차선)</p>
-                  <p>북한남 삼거리(우측차선)- 다산로에서 U턴</p>
-                  <p>소월길(하얏트 방향) - 남산맨션 바로 옆 남산예술원웨딩홀</p>
-                </div>
-              </div>
-            </div>
+      <!-- map -->
+      <div class="card">
+        <div class="card-body">
+          <div id="map-weddinghall" style="width: 100%;height: 200px; margin: auto;">
           </div>
-        </div>
-
-        <div class="accordion-item">  
-          <!-- trigger -->
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              피로연장 위치 확인하기
-            </button>
-          </h2>
-
-          <!-- target -->
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div id="map-afterparty" style="width: 100%;height: 200px; margin: auto;">
-              </div>
-              <div class="alert alert-success clipboard4" role="alert" value="서울특별시 서대문구 수색로4길 7">
-                <strong>서울특별시 서대문구 수색로4길 7</strong>
-              </div>
+          <!-- INFO -->
+          <br>
+          <div class="alert alert-success clipboard3" role="alert" value="서울 용산구 소월로 375">
+            <strong>서울 용산구 소월로 375</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            <strong>200 여대 주차가능</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            <strong>남산 공원에 위치한 웨딩홀이므로 <br> 현금인출기가 없습니다</strong>
+          </div>
+          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="subway-tab" data-bs-toggle="tab" data-bs-target="#subway" type="button" role="tab" aria-controls="home" aria-selected="true">지하철</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus" type="button" role="tab" aria-controls="bus" aria-selected="false">버스</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="car-tab" data-bs-toggle="tab" data-bs-target="#car" type="button" role="tab" aria-controls="car" aria-selected="false">자가용</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="subway" role="tabpanel" aria-labelledby="home-tab">
+              <br>
+              <p>6호선 한강진역 1번 출구 반대방향 - 도보 7분 거리</p>
+              <p>1번 출구 예식 한 시간 전 셔틀버스 운행 (10 ~ 15 분 간격)</p>
+            </div>
+            <div class="tab-pane fade" id="bus" role="tabpanel" aria-labelledby="bus-tab">
+              <br>
+              <p>장춘단 길 입구 하차 - 
+                <span class="badge bg-primary">402</span>,
+                <span class="badge bg-primary">405</span>,
+                <span class="badge bg-primary">142</span>,
+                <span class="badge bg-primary">420</span>,
+                <span class="badge bg-primary">407</span>
+              </p>
+              <p>남산예술원 하차 - 
+                <span class="badge bg-primary">402</span>,
+                <span class="badge bg-primary">405</span>
+              </p>
+              <p>한강진역 하차 - 
+                <span class="badge bg-primary">110</span>,
+                <span class="badge bg-primary">405</span>
+              </p>
+              <p>블루스퀘어 하차 - 
+                <span class="badge bg-primary">142</span>,
+                <span class="badge bg-primary">144</span>,
+                <span class="badge bg-primary">402</span>,
+                <span class="badge bg-primary">407</span>,
+                <span class="badge bg-success">6211</span>
+              </p>
+            </div>
+            <div class="tab-pane fade" id="car" role="tabpanel" aria-labelledby="car-tab">
+              <br>
+              <p>경부고속도로 - 한남대교에서 오실 경우</p>
+              <p>경부고속도로 - 한남대교 - 한남5거리 (직진, 우측차선)</p>
+              <p>북한남 삼거리(우측차선)- 다산로에서 U턴</p>
+              <p>소월길(하얏트 방향) - 남산맨션 바로 옆 남산예술원웨딩홀</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- GALLERY -->
     
     <section id="gallery">
