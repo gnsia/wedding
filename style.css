@@ -20,7 +20,6 @@
 #wrapper > * {
   /* border: 3px solid green; */
   border-radius: 1rem;
-  margin: 1rem 0;
 }
 
 /* PROLOGUE */
@@ -30,7 +29,7 @@
   flex-flow: column;
   align-items: center;
   width: 94%;
-  height: 10000px;
+  height: 27500px;
 }
 
 #prologue .hello {
@@ -58,15 +57,33 @@
 
 #prologue .message {
   position: fixed;
-  margin-top: 60vw;
   text-align: center;
-  line-height: 2rem;
   font-size: small;
-  /* display: none; */
+  display: none;
+  top: 50vw;
+}
+
+#prologue img {
+  width: 100%;
 }
 
 #prologue .img-message-1 {
-  /* display: none; */
+  opacity: 0;
+}
+
+#prologue .img-message-2 {
+  opacity: 0;
+}
+
+#prologue .img-message-3 {
+  opacity: 0;
+}
+
+#prologue .img-message-4 {
+  opacity: 0;
+}
+
+#prologue .img-message-5 {
   opacity: 0;
 }
 
