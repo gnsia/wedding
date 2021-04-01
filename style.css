@@ -29,52 +29,51 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-around;
-  width: 90vw;
-  height: 100vw;
+  width: 94%;
+  height: 10000px;
 }
-
-/* #prologue > * {
-  border: 3px solid blue;
-  border-radius: 1rem;
-  margin: 1rem 0;
-} */
 
 #prologue .hello {
   text-align: center;
-}
-
-#prologue .message {
-  text-align: center;
-  font-family: "GmarketSansLight";
-  line-height: 2rem;
-  font-size: small;
+  position: fixed;
+  margin-top: 30vw;
+  opacity: 1;
 }
 
 #prologue h1 {
-  font-family: "GmarketSansLight";
   font-size: xx-large;
   letter-spacing: 0.4rem;
   margin: 1rem 0;
 }
 
 #prologue h2 {
-  font-family: "GmarketSansLight";
-
   font-size: medium;
   margin: 1rem 0;
 }
 
 #prologue h3 {
-  font-family: "GmarketSansLight";
   font-size: small;
   margin: 1rem 0;
+}
+
+#prologue .message {
+  position: fixed;
+  margin-top: 60vw;
+  text-align: center;
+  line-height: 2rem;
+  font-size: small;
+  /* display: none; */
+}
+
+#prologue .img-message-1 {
+  /* display: none; */
+  opacity: 0;
 }
 
 /* INFO */
 
 #info {
-  width: 80vw;
+  width: 94%;
 }
 
 #info .card-body {
@@ -99,11 +98,13 @@
 /* MAPS */
 
 #maps {
-  width: 95vw;
+  width: 94%;
 }
 
 #maps p {
   text-align: center;
+  font-size: small;
+  line-height: 1.4rem;
 }
 
 #maps .map p {
@@ -132,11 +133,6 @@
   text-align: center;
 }
 
-#maps p {
-  font-size: small;
-  margin: 0.4rem 0px;
-}
-
 #maps .nav-link {
   font-size: small;
 }
@@ -162,5 +158,5 @@
 /* COMMENTS */
 
 #comments {
-  width: 90vw;
+  width: 94%;
 }

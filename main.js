@@ -1,6 +1,7 @@
-////////////////////////////////////////////////////////////////////// clipboard_copyto
-function Clipboard_CopyTo(value) {
-  var tempInput = document.createElement("input");
+////////////////////////////////////////////////////////ClipboardCopy
+
+function clipboardCopyTo(value) {
+  let tempInput = document.createElement("input");
   tempInput.value = value;
   document.body.appendChild(tempInput);
   tempInput.select();
@@ -9,37 +10,47 @@ function Clipboard_CopyTo(value) {
 }
 
 document.querySelector('.clipboard1').onclick = function(self) {
-  let copyVal = self.target.value;
-  Clipboard_CopyTo(copyVal);
-  alert('계좌번호가 복사되었습니다!');
+  let copyVal = self.target.innerText;
+  clipboardCopyTo(copyVal);
+  alert('복사완료');
 }
 
 document.querySelector('.clipboard2').onclick = function(self) {
   let copyVal = self.target.value;
-  Clipboard_CopyTo(copyVal);
-  alert('계좌번호가 복사되었습니다!');
+  clipboardCopyTo(copyVal);
+  alert('복사완료');
 }
 
 document.querySelector('.clipboard3').onclick = function(self) {
   let copyVal = self.target.value;
-  Clipboard_CopyTo(copyVal);
-  alert('주소가 복사되었습니다!');
+  clipboardCopyTo(copyVal);
+  alert('복사완료');
 }
 
-////////////////////////////////////////////////////////////////////// modal
+////////////////////////////////////////////////////////////////////// scroll
 
-let modal = document.querySelector('#modal');
-let mainImg = document.querySelector('#main-img')
+let scrollYPos = 0;
+window.addEventListener('scroll', function(e) {
+    scrollYPos = Math.round(window.scrollY/25);
+    console.log(scrollYPos);
+    document.querySelector('.hello').style.opacity = 1;
+    document.querySelector('.hello').style.opacity -= (scrollYPos / 100);
+    
+    if (document.querySelector('.hello').style.opacity < 0.95) {
+      document.querySelector('.notice').style.display = 'none';
+    } else {
+      document.querySelector('.notice').style.display = 'inline';
+    }
 
-function modalOpen(self) {
-  document.querySelector('.pop').src = self.src;
-  console.log(self.src);
-  modal.style.display = "flex";
-}
+    if (document.querySelector('.hello').style.opacity < 0.15) {
+      document.querySelector('.img-message-1').style.opacity = (scrollYPos / 200);
+    } else {
+      document.querySelector('.img-message-1').style.opacity = 0;
+    }
 
-function modalClose() {
-  modal.style.display = 'none'
-}
+})
+
+
 
 
 ////////////////////////////////////// kakao map - weddinghall
