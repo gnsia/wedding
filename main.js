@@ -31,7 +31,7 @@ document.querySelector('.clipboard3').onclick = function(self) {
 
 let scrollYPos = 0;
 window.addEventListener('scroll', function(e) {
-    scrollYPos = Math.round(window.scrollY/25);
+    scrollYPos = Math.round(window.scrollY/10);
 
     document.querySelector('.hello').style.opacity = 1;
     console.log(scrollYPos);
