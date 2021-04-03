@@ -26,16 +26,26 @@
 
 #prologue {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   align-items: center;
   width: 94%;
   height: 28600px;
+  /* justify-content: center; */
+}
+
+#prologue .cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #prologue .hello {
   text-align: center;
-  position: fixed;
-  margin-top: 30vw;
+  /* margin-top: 30vw; */
+  align-self: center;
   opacity: 1;
 }
 
@@ -56,15 +66,18 @@
 }
 
 #prologue .message {
-  position: fixed;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   font-size: small;
-  display: none;
-  margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #prologue img {
-  width: 100%;
+  width: 50%;
 }
 
 #prologue .img-message-1 {
