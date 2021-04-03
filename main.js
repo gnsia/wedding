@@ -103,6 +103,8 @@ window.addEventListener('scroll', function(e) {
     } else if (scrollYPos >= 1000 && scrollYPos < 1100) {
       document.querySelector('.img-message-5').style.display = 'inline';
       document.querySelector('.img-message-5').style.opacity = 1 - scrollYPosForMessage5Fadeout;
+    } else if (scrollYPos >= 1100) {
+      document.querySelector('.img-message-5').style.display = 'none';
     }
 })
 

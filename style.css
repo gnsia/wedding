@@ -25,27 +25,31 @@
 /* PROLOGUE */
 
 #prologue {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   width: 94%;
-  height: 28600px;
-  /* justify-content: center; */
+  height: 15000px;
 }
 
-#prologue .cover {
+#prologue .elevator {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: 100%;
-  position: fixed;
+  height: 40rem;
+}
+
+#prologue .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 #prologue .hello {
-  text-align: center;
-  /* margin-top: 30vw; */
-  align-self: center;
   opacity: 1;
 }
 
@@ -65,23 +69,8 @@
   margin: 1rem 0;
 }
 
-#prologue .message {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  font-size: small;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 #prologue img {
   width: 100%;
-}
-
-#prologue .content-1 {
-  display: flex;
 }
 
 #prologue .img-message-1 {
@@ -112,7 +101,6 @@
 }
 
 #info .card-body {
-  font-family: "GmarketSansLight";
   display: flex;
   flex-direction: column;
   align-items: center;
