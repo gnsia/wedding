@@ -80,6 +80,10 @@
   width: 100%;
 }
 
+#prologue .content-1 {
+  display: flex;
+}
+
 #prologue .img-message-1 {
   opacity: 0;
 }

@@ -5,8 +5,8 @@ function clipboardCopyTo(value) {
   tempInput.value = value;
   document.body.appendChild(tempInput);
   tempInput.select();
-  tempInput.focus();
   tempInput.setSelectionRange(0, 9999);
+  tempInput.focus();
   document.execCommand("copy");
   document.body.removeChild(tempInput);
 }
