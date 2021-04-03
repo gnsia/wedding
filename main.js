@@ -52,6 +52,7 @@ window.addEventListener('scroll', function(e) {
     let scrollYPosForMessage5Fadeout = ((scrollYPos - 1000) / 100);
 
     document.querySelector('.hello').style.opacity = 1 + scrollYPosForHelloFadeout;
+
     if (document.querySelector('.hello').style.opacity < 0.95) {
       document.querySelector('.notice').style.display = 'none';
     } else {
@@ -180,6 +181,7 @@ window.addEventListener("load", function(e) {
 
 
   document.querySelector('.left').innerText = '<h1>hello</h1>';
+  document.getElementById('left').appendChild('h1').innerText = "hello";
 
   thumbnail_left.innerHTML = `<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#left-1">
   <img src="https://i.ibb.co/FYfRQxf/210317-0019.jpg" class="img-thumbnail" alt="...">
@@ -193,5 +195,3 @@ window.addEventListener("load", function(e) {
   //   </button>`
   // }
 }, false);
-
-document.querySelector('.left').innerText('<h1>hello</h1>');
