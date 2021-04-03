@@ -3,7 +3,6 @@
 function clipboardCopyTo(value) {
   let tempInput = document.createElement("input");
   tempInput.value = value;
-  console.log('tempInput.value', tempInput.value);
   document.body.appendChild(tempInput);
   tempInput.select();
   tempInput.focus();
@@ -14,21 +13,18 @@ function clipboardCopyTo(value) {
 
 document.querySelector('.clipboard1').onclick = function(self) {
   let copyVal = self.target.innerText;
-  console.log('copyVal', copyVal);
   clipboardCopyTo(copyVal);
   alert('복사완료');
 }
 
 document.querySelector('.clipboard2').onclick = function(self) {
   let copyVal = self.target.value;
-  console.log('copyVal', copyVal);
   clipboardCopyTo(copyVal);
   alert('복사완료');
 }
 
 document.querySelector('.clipboard3').onclick = function(self) {
   let copyVal = self.target.value;
-  console.log('copyVal', copyVal);
   clipboardCopyTo(copyVal);
   alert('복사완료');
 }
