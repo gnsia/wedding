@@ -171,6 +171,7 @@
 
 #gallery .thumbnail {
   display: flex;
+  justify-content: space-around;
 }
 
 #gallery img {
