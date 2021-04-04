@@ -33,11 +33,12 @@ document.querySelector('.clipboard1').onclick = function(self) {
 ////////////////////////////////////////////////////////////////////// scroll
 
 let scrollYPos = 0;
+
+
 window.addEventListener('scroll', function(e) {
     scrollYPos = Math.round(window.scrollY/10);
 
     document.querySelector('.hello').style.opacity = 1;
-    console.log(scrollYPos);
 
     let scrollYPosForHelloFadeout = (scrollYPos / 100) * -1;
     let scrollYPosForMessage1Fadein = ((scrollYPos - 100) / 100);
@@ -142,3 +143,4 @@ class myStaticMap{
 
 const weddinghall = new myStaticMap(37.54490486081645, 127.00042434032412, 'map-weddinghall');
 
+//////////////////////////////////
