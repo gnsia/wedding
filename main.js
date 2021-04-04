@@ -11,11 +11,11 @@ function clipboardCopyTo(value) {
   document.body.removeChild(tempInput);
 }
 
-document.querySelector('.clipboard1').onclick = function(self) {
-  let copyVal = self.target.innerText;
-  clipboardCopyTo(copyVal);
-  alert('복사완료');
-}
+// document.querySelector('.clipboard1').onclick = function(self) {
+//   let copyVal = self.target.innerText;
+//   clipboardCopyTo(copyVal);
+//   alert('복사완료');
+// }
 
 // document.querySelector('.clipboard2').onclick = function(self) {
 //   let copyVal = self.target.value;
