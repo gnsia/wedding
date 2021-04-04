@@ -41,16 +41,24 @@ window.addEventListener('scroll', function(e) {
     document.querySelector('.hello').style.opacity = 1;
 
     let scrollYPosForHelloFadeout = (scrollYPos / 100) * -1;
+
     let scrollYPosForMessage1Fadein = ((scrollYPos - 100) / 100);
     let scrollYPosForMessage1Fadeout = ((scrollYPos - 200) / 100);
+
     let scrollYPosForMessage2Fadein = ((scrollYPos - 300) / 100);
     let scrollYPosForMessage2Fadeout = ((scrollYPos - 400) / 100);
+    
     let scrollYPosForMessage3Fadein = ((scrollYPos - 500) / 100);
     let scrollYPosForMessage3Fadeout = ((scrollYPos - 600) / 100);
+    
     let scrollYPosForMessage4Fadein = ((scrollYPos - 700) / 100);
     let scrollYPosForMessage4Fadeout = ((scrollYPos - 800) / 100);
+    
     let scrollYPosForMessage5Fadein = ((scrollYPos - 900) / 100);
     let scrollYPosForMessage5Fadeout = ((scrollYPos - 1000) / 100);
+    
+    let scrollYPosForMessage6Fadein = ((scrollYPos - 1100) / 100);
+    let scrollYPosForMessage6Fadeout = ((scrollYPos - 1200) / 100);
 
     document.querySelector('.hello').style.opacity = 1 + scrollYPosForHelloFadeout;
 
@@ -61,12 +69,13 @@ window.addEventListener('scroll', function(e) {
     }
 
 
-    if (scrollYPos <= 100 || scrollYPos >= 1100) {
+    if (scrollYPos <= 100 || scrollYPos >= 1300) {
       document.querySelector('.img-message-1').style.display = 'none';
       document.querySelector('.img-message-2').style.display = 'none';
       document.querySelector('.img-message-3').style.display = 'none';
       document.querySelector('.img-message-4').style.display = 'none';
       document.querySelector('.img-message-5').style.display = 'none';
+      document.querySelector('.img-message-6').style.display = 'none';
     } else if (scrollYPos >= 100 && scrollYPos < 200) {
       document.querySelector('.img-message-1').style.display = 'inline';
       document.querySelector('.img-message-1').style.opacity = scrollYPosForMessage1Fadein;
@@ -105,8 +114,16 @@ window.addEventListener('scroll', function(e) {
     } else if (scrollYPos >= 1000 && scrollYPos < 1100) {
       document.querySelector('.img-message-5').style.display = 'inline';
       document.querySelector('.img-message-5').style.opacity = 1 - scrollYPosForMessage5Fadeout;
-    } else if (scrollYPos >= 1100) {
+      document.querySelector('.img-message-6').style.display = 'none';
+    } else if (scrollYPos >= 1100 && scrollYPos < 1200) {
       document.querySelector('.img-message-5').style.display = 'none';
+      document.querySelector('.img-message-6').style.display = 'inline';
+      document.querySelector('.img-message-6').style.opacity = scrollYPosForMessage6Fadein;
+    } else if (scrollYPos >= 1200 && scrollYPos < 1300) {
+      document.querySelector('.img-message-6').style.display = 'inline';
+      document.querySelector('.img-message-6').style.opacity = 1 - scrollYPosForMessage6Fadeout;
+    } else if (scrollYPos >= 1300) {
+      document.querySelector('.img-message-6').style.display = 'none';
     }
 })
 
